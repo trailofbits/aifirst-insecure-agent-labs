@@ -29,12 +29,13 @@ Note: Click the help menu for a list of all objectives and additional hints.
    - Docker: https://docs.docker.com/get-docker/
    - Podman: https://podman.io/getting-started/installation (also install `podman-compose`)
 
-2. **Ollama** running locally with the llama3 model:
+2. **Ollama** running locally with the llama3 and llama3-groq-tool-use models:
    ```bash
    # Install from https://ollama.ai
 
    ollama serve
-   ollama pull llama3-groq-tool-use
+   ollama pull llama3-groq-tool-use:8b
+   ollama pull llama3
    ```
 
 ### Installation
