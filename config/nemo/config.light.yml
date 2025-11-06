@@ -1,0 +1,17 @@
+# NeMo Guardrails Configuration - Lightweight Version
+# Minimal guardrails for maximum performance
+# No torch dependency - suitable for resource-constrained environments
+
+models:
+  - type: main
+    engine: ollama
+    model: llama3-groq-tool-use:8b
+
+rails:
+  # Minimal rails configuration - relies on regex guardrails instead
+  # Note: jailbreak detection heuristics removed to avoid torch dependency
+  input:
+    flows: []
+
+  output:
+    flows: []

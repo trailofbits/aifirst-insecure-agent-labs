@@ -1,0 +1,59 @@
+services:
+  # Backend API
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: chatbot-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - ./config:/app/config:ro
+    env_file:
+      - ./backend/.env
+    environment:
+      - OLLAMA_HOST=${OLLAMA_HOST:-http://host.docker.internal:11434}
+      - OLLAMA_MODEL=${OLLAMA_MODEL:-llama3}
+      - CONTENT_SERVER_HOST=content-server
+      - CONTENT_SERVER_PORT=8181
+      - PORT=8000
+    depends_on:
+      - content-server
+    networks:
+      - chatbot-network
+
+  # React Frontend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: chatbot-frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    depends_on:
+      - backend
+    networks:
+      - chatbot-network
+
+  # Content Server
+  content-server:
+    build:
+      context: ./content-server
+      dockerfile: Dockerfile
+    container_name: chatbot-content-server
+    ports:
+      - "8181:8181"
+    environment:
+      - CONTENT_SERVER_PORT=8181
+    networks:
+      - chatbot-network
+
+networks:
+  chatbot-network:
+    driver: bridge

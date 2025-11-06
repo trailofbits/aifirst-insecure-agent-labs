@@ -1,0 +1,130 @@
+/* Lab Banner Styles */
+.lab-banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lab-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.lab-icon {
+  font-size: 1.5rem;
+}
+
+.lab-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.lab-prerequisites {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border-left: 3px solid #fbbf24;
+}
+
+.lab-prerequisites strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.lab-prerequisites p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.95;
+}
+
+.lab-instructions {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.lab-instructions > p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.lab-step {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.step-header {
+  margin-bottom: 0.5rem;
+}
+
+.step-prompt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  margin: 0.5rem 0;
+}
+
+.copy-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.copy-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.copy-btn:active {
+  transform: scale(0.95);
+}
+
+.step-expected {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+.step-warning {
+  background: rgba(251, 191, 36, 0.2);
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  border-left: 3px solid #fbbf24;
+}
+
+.lab-tip {
+  background: rgba(16, 185, 129, 0.2);
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  border-left: 3px solid #10b981;
+  font-size: 0.9rem;
+}
+
+.lab-tip strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
