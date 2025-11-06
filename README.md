@@ -11,6 +11,9 @@ A hands-on framework for testing prompt injection and system prompt extraction a
 
 Note: Click the help menu for a list of all objectives and additional hints.
 
+<img width="2532" height="1312" alt="CleanShot 2025-11-06 at 07 44 29" src="https://github.com/user-attachments/assets/8bdcb9bd-9b63-4dc7-8f23-007a52c91657" />
+
+
 ## Features
 
 * Configurable input/output guardrails and regex validation that match real world deployments.
