@@ -1,6 +1,6 @@
 # Chatbot Agent Exploit Labs
 
-A hands-on framework for testing prompt injection and system prompt extraction attacks with real-time guardrail protection, tracing, and agent tools. 
+A hands-on lab for testing prompt injection and system prompt extraction attacks with real-time guardrail protection, tracing, and agent tools. 
 
 ## Lab Notes
 
