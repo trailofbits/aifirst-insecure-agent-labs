@@ -23,7 +23,7 @@ lxml==4.9.3
 
 # Configuration
 pyyaml==6.0.1
-python-dotenv==1.0.0
+python-dotenv==1.2.2
 pydantic>=2.7.4,<3.0.0
 pydantic-settings>=2.1.0
 
